@@ -1,0 +1,179 @@
+/* Ensure the body and html take up the full width and height of the viewport */
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+	scroll-behavior: smooth;
+}
+
+/* Navigation */
+.main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 1rem 2rem;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+.main-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 2rem;
+}
+
+.main-nav a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.main-nav a:hover {
+    opacity: 1;
+}
+
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    z-index: -2;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+}
+
+.hero-content {
+    padding: 2rem;
+}
+
+.monogram {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+}
+
+.monogram span {
+    margin: 0 0.5rem;
+}
+
+.couple-names {
+    font-size: 4rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+}
+
+.wedding-date {
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+    opacity: 0.9;
+}
+
+/* Section Styles */
+.section {
+    padding: 4rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+    width: 100%; /* Ensure section takes full width */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.section:nth-child(even) {
+    background-color: #fff;
+}
+
+.section-content {
+    flex: 2;
+    padding-right: 2rem;
+	padding-left: 2rem;
+	font-family: 'Bellefair'
+}
+
+.section-image {
+    flex: 1;
+    text-align: right;
+}
+
+.section-image img {
+    max-width: 100%; /* Adjusted to make images smaller */
+    height: auto;
+    border-radius: 10px;
+}
+
+.section-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.section-content p {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Subtle line break */
+.section-content hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 1rem 0;
+}
+
+/* Schedule Section */
+.schedule-section {
+    background-color: #2f4f4f;
+    color: #fff;
+    text-align: center;
+}
+
+.schedule-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.schedule-item {
+    margin-bottom: 2rem;
+}
+
+.schedule-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.schedule-item p {
+    font-size: 1rem;
+    color: #ccc;
+}
+

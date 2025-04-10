@@ -1,0 +1,874 @@
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Cormorant Garamond", serif;
+}
+
+.wedding-container {
+  width: 100%;
+}
+
+/* Hero Section */
+.hero-section {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-image: url(https://cdn.builder.io/api/v1/image/assets%2F96590e55c30c494fa99641fdb3a27df3%2F23cd4b0752cd441ea91f8f9a944a1a52);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-left: auto;
+  margin-right: auto;
+  flex-grow: 0;
+  position: relative;
+  justify-content: center;
+  padding: 95px;
+  min-height: 100vh;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  align-self: center;
+  margin-bottom: auto;
+}
+
+.hero-welcome {
+  color: #fff;
+  font-size: 25px;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  letter-spacing: -0;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  font-style: italic;
+  text-align: center;
+}
+
+.hero-names {
+  position: relative;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Cormorant Garamond", serif;
+  color: rgba(255, 255, 255, 1);
+  font-size: 80px;
+  font-weight: 100;
+  text-align: center;
+}
+
+.main-nav {
+	position: fixed; /* Fix the navigation bar at the top */
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1000;
+	background: linear-gradient(90deg, #d4d4d4, #a6a6a6); /* Metallic gradient */
+	opacity: 0.9; /* Slight transparency for a metallic look */
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+	transition: opacity 0.3s ease; /* Smooth transition for opacity changes */
+}
+
+.main-nav:hover {
+  opacity: 1; /* Fully opaque on hover */
+}
+.nav-menu {
+  width: 100%;
+  height: 60px;
+  background-color: #d9d9d9;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 24px;
+  list-style: none;
+}
+
+.nav-link {
+  color: #000000;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: "Cormorant Garamond", serif;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.mobile-menu-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+.menu-icon {
+  width: 24px;
+  height: 24px;
+  color: #143d1b;
+}
+
+.wedding-date {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 40px;
+  font-family: "Cormorant Infant", serif;
+  font-weight: 700;
+  letter-spacing: 4.6px;
+  text-align: center;
+}
+
+/* Overview Section */
+.overview-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  background-color: #e4e4e4;
+  padding: 95px;
+  gap: 60px;
+  margin-right: auto;
+  margin-left: auto;
+  min-height: 100vh;
+}
+
+.overview-image {
+  width: 400px;
+  height: 600px;
+  flex-shrink: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.full-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overview-text {
+  max-width: 459px;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-size: 26px;
+  color: #000000;
+  font-family: "Cormorant Garamond", serif;
+  line-height: 1.5;
+  letter-spacing: 1.82px;
+  text-align: left;
+}
+
+/* Schedule Section */
+.schedule-section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center; 
+	width: 100%;
+	padding: 95px 20px;
+	background-color: #fff;
+	min-height: 100vh;
+  }
+
+.section-content {
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: 962px;
+}
+
+
+.schedule-title {
+	margin-bottom: 40px;
+	color: #000000;
+	font-size: 30px;
+	letter-spacing: 3.36px;
+	font-family: "Cormorant Garamond", serif;
+	border-bottom: 1px solid #000000;
+	width: 100%;
+	text-align: center;
+	padding-bottom: 12px;
+	font-weight: normal;
+  }
+
+.schedule-body {
+  justify-content: center;
+  gap: 2rem;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 80%;
+}
+
+.schedule-container {
+	display: flex;
+	justify-content: space-between; /* Ensure equal spacing between columns */
+	align-items: stretch; /* Align columns vertically */
+	gap: 20px; /* Add spacing between columns */
+}
+
+.schedule-column {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  line-height: normal;
+  width: 50%;
+}
+
+.times-column,
+.timeline-column,
+.events-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content within each column */
+}
+
+.events-column {
+	display: flex;
+	flex-direction: column;
+	align-items: center; /* Center items horizontally */
+	justify-content: space-around; /* Distribute items evenly */
+	width: 50%; /* Increase the width of the events column */
+	gap: 2rem; /* Add spacing between items */
+  }
+
+.timeline-column {
+	margin-left: 0; /* Remove any additional margin */
+	margin-right: 0; /* Ensure it's centered */
+	height: auto;
+	align-items: stretch;
+  }
+
+.times-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2rem;
+  width: 50%;
+  text-align: right;
+  font-family: "Cormorant Infant", serif;
+  font-size: 18px;
+  letter-spacing: 2.52px;
+  justify-content: space-around;
+  margin-left: auto;
+  height: auto;
+  flex-grow: 1;
+  padding: 30px 0;
+}
+
+.ceremony-times,
+.reception-times {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.event-time {
+  height: 35px;
+  position: relative;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  flex-grow: 0;
+  display: block;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: auto;
+  flex-grow: 1;
+}
+
+.timeline-svg {
+  width: 20px;
+  height: 133px;
+}
+
+.events-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-sizing: border-box;
+    gap: 2rem;
+    height: auto;
+    padding: 30px 0;
+}
+
+.ceremony-events,
+.reception-events {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  gap: 1.5rem;
+}
+
+.event-item {
+	display: flex;
+	align-items: center; /* Center text vertically with the image */
+	gap: 1rem; /* Add spacing between the image and text */
+	text-align: center; /* Center the text */
+	width: 100%; /* Ensure the item takes full width */
+  }
+  
+
+.event-icon {
+  width: 35px;
+  height: 35px;
+}
+
+.event-name {
+	font-family: "Cormorant Garamond", serif;
+	font-size: 18px;
+	letter-spacing: 2.52px;
+	font-weight: normal;
+	text-align: left; /* Center the text */
+	flex-grow: 1; /* Allow the text to grow and align properly */
+  }
+
+/* Location Section */
+.location-section {
+  width: 100%;
+  background-color: #143d1b;
+  padding: 95px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+  align-items: center;
+  min-height: 100vh;
+}
+
+.location-content {
+  max-width: 962px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.location-title {
+  margin-bottom: 40px;
+  color: #fff;
+  font-size: 30px;
+  letter-spacing: 3.36px;
+  font-family: "Cormorant Garamond", serif;
+  border-bottom: 1px solid #fff;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 12px;
+  font-weight: normal;
+}
+
+.location-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  height: 40rem;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.location-map {
+  width: 267px;
+  height: 425px;
+  flex-shrink: 0;
+  display: flex;
+}
+
+.venues-container {
+  flex: 1;
+}
+
+.venue-item {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.venue-number {
+  color: #fff;
+  font-size: 48px;
+  font-family: "Cormorant Infant", serif;
+  font-weight: 700;
+  letter-spacing: 6.72px;
+}
+
+.venue-image {
+	border-radius: 50%; /* Makes the container circular */
+	overflow: hidden; /* Ensures content stays within the circle */
+	width: 216px; /* Fixed width */
+	height: 216px; /* Fixed height */
+	margin-bottom: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  }
+  
+  .venue-image img {
+	width: 100%; /* Ensures the image fills the container */
+	height: 100%; /* Ensures the image fills the container */
+	object-fit: cover; /* Crops the image to fit the circle */
+	object-position: center; /* Centers the image within the circle */
+  }
+
+.venue-info {
+  flex: 1;
+  align-items: center;
+}
+
+.venue-name {
+	color: #fff;
+	font-size: 24px;
+	font-family: "Cormorant Garamond", serif;
+	margin-bottom: 12px;
+}
+
+
+.venue-description {
+  color: #fff;
+  font-size: 18px;
+  font-family: "Cormorant Garamond", serif;
+  margin-bottom: 12px;
+}
+
+.venue-address {
+  color: #fff;
+  font-size: 16px;
+  font-family: "Cormorant Infant", serif;
+  letter-spacing: 1.68px;
+  font-style: normal;
+  display: block;
+}
+
+/* FAQ Section */
+.faq-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+  width: 100%;
+  background-color: #e4e4e4;
+  padding: 56px 104px;
+  min-height: 100vh;
+}
+
+.faq-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 962px;
+}
+
+.faq-title {
+  width: 100%;
+  border-bottom: 1px solid #000000;
+  padding-bottom: 20px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 30px;
+  letter-spacing: 3.36px;
+  text-align: center;
+  font-weight: normal;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.faq-item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.faq-question {
+  font-family: "Cormorant Infant", serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 1.96px;
+  margin-bottom: 16px;
+}
+
+.faq-answer {
+  font-family: "Cormorant Infant", serif;
+  font-size: 16px;
+  letter-spacing: 1.68px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #000000;
+}
+
+/* RSVP Section */
+.rsvp-section {
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+  padding: 40px 20px;
+  flex-grow: 0;
+  min-height: 100vh;
+}
+
+.rsvp-content {
+  width: 100%;
+  max-width: 962px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rsvp-title {
+  width: 100%;
+  max-width: 962px;
+  border-bottom: 1px solid #000;
+  padding-bottom: 20px;
+  color: #000;
+  font-size: 30px;
+  font-family: "Cormorant Garamond", serif;
+  letter-spacing: 3.36px;
+  text-align: center;
+  font-weight: normal;
+}
+
+.rsvp-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 68px;
+  padding: 0 20px;
+  margin-top: 36px;
+}
+
+.rsvp-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 29px;
+}
+
+.rsvp-text {
+  color: #000;
+  font-size: 20px;
+  font-family: "Cormorant Garamond", serif;
+  letter-spacing: 2.8px;
+  text-align: center;
+  max-width: 367px;
+}
+
+.highlight-text {
+  font-weight: 700;
+}
+
+.rsvp-button {
+  width: 157px;
+  height: 38px;
+  border-radius: 20px;
+  background-color: #143d1b;
+  cursor: pointer;
+  color: #fff;
+  font-size: 20px;
+  font-family: "Cormorant Garamond", serif;
+  letter-spacing: 2.8px;
+  border: none;
+}
+
+.couple-image {
+  width: 275px;
+  height: 386px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* Gallery Section */
+.gallery-section {
+  width: 100%;
+  background-color: #e4e4e4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+  padding: 40px 0;
+}
+
+.gallery-content {
+  max-width: 962px;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.gallery-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.gallery-title {
+  font-size: 30px;
+  font-family: "Cormorant Garamond", serif;
+  letter-spacing: 3.36px;
+  margin-bottom: 24px;
+  font-weight: normal;
+}
+
+.title-underline {
+  width: 100%;
+  height: 1px;
+  background-color: #000000;
+}
+
+.gallery-grid {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  margin-top: 36px;
+}
+
+.gallery-row {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 10px;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.portrait-row {
+  gap: 34px;
+}
+
+.gallery-item {
+  flex: 1;
+}
+
+.landscape-img {
+  width: 100%;
+  aspect-ratio: 3/2;
+  object-fit: cover;
+}
+
+.portrait-img {
+  width: 100%;
+  aspect-ratio: 2/3;
+  object-fit: cover;
+}
+
+/* Media Queries */
+@media (max-width: 991px) {
+  .hero-section {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 0;
+    align-items: stretch;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100vh;
+  }
+
+  .hero-welcome {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .overview-section {
+    padding: 32px;
+    gap: 40px;
+  }
+
+  .schedule-section {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .section-content {
+    padding: 1.5rem;
+  }
+
+  .times-column {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .timeline {
+    justify-content: space-around;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .events-container {
+    margin-right: auto;
+  }
+
+  .location-details {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .faq-section {
+    padding-left: 52px;
+    padding-right: 52px;
+  }
+
+  .rsvp-container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-section {
+    padding: 70px;
+    height: auto;
+    flex-grow: 0;
+  }
+
+  .hero-welcome {
+    font-size: 20px;
+  }
+
+  .hero-names {
+    font-size: 40px;
+  }
+
+  .mobile-menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background-color: #d9d9d9;
+    transition: top 0.3s ease-in-out;
+    z-index: 100;
+    padding: 20px 0;
+  }
+
+  .nav-menu.mobile-menu-open {
+    top: 0;
+  }
+
+  .nav-item {
+    margin: 10px 0;
+  }
+
+  .wedding-date {
+    font-size: 20px;
+  }
+
+  .overview-section {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-around;
+  }
+
+  .overview-image {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-self: center;
+    height: auto;
+    flex-grow: 0;
+  }
+
+  .overview-text {
+    text-align: center;
+  }
+
+  .section-content {
+    padding: 1rem;
+  }
+
+  .event-time {
+    height: auto;
+    flex-grow: 0;
+  }
+
+  .location-details {
+    height: auto;
+    flex-grow: 0;
+    width: auto;
+    align-self: center;
+  }
+
+  .location-map {
+    display: none;
+  }
+
+  .venue-item {
+    flex-direction: column;
+  }
+
+  .venue-image {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .faq-section {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .couple-image {
+    width: 180px;
+    height: 252px;
+  }
+
+  .gallery-row.landscape-row {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .gallery-row.portrait-row {
+    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+    gap: 10px;
+  }
+
+  .gallery-row.portrait-row .gallery-item:nth-child(3) {
+    display: none;
+  }
+}
+
+@media (min-width: 641px) {
+  .mobile-menu-toggle {
+    display: none;
+  }
+}
